@@ -17,7 +17,7 @@ public class TrainingTarget : EnemyHealth
         if (isDead) return;
         isDead = true;
         events.OnDeath.Invoke();
-        Invoke("Revive", timeToRevive);
+        //Invoke("Revive", timeToRevive);
 
         if(shieldSlider != null)shieldSlider.gameObject.SetActive(false);
         if (healthSlider != null) healthSlider.gameObject.SetActive(false);
@@ -28,7 +28,7 @@ public class TrainingTarget : EnemyHealth
 
         GetComponent<Animator>().Play("Target_Die"); 
     }
-    private void Revive()
+    public void Revive()
     {
         isDead = false;
         GetComponent<Animator>().Play("Target_Revive");
