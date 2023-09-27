@@ -1752,6 +1752,8 @@ MonoBehaviour:
   civiTargetsText: {fileID: 1480834545}
   enemyParent: {fileID: 1757925653}
   civiParent: {fileID: 523001415}
+  enemyTargetsShot: 0
+  civiTargetsShot: 0
 --- !u!4 &94935208
 Transform:
   m_ObjectHideFlags: 0
@@ -3228,7 +3230,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 1
 --- !u!1 &217011048
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,7 +5388,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 1
 --- !u!4 &407929404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7ff6478522c5f8f4bb8173e2880c414c, type: 3}
@@ -5924,7 +5930,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 0
 --- !u!1 &450527622
 GameObject:
   m_ObjectHideFlags: 0
@@ -10265,7 +10273,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 1
 --- !u!1 &885662018
 GameObject:
   m_ObjectHideFlags: 0
@@ -16434,7 +16444,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 1
 --- !u!4 &1395271420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3270769078326322527, guid: 6dbb20388de54d344be3e2d134c0aad7, type: 3}
@@ -17410,7 +17422,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 0
 --- !u!1 &1443524333
 GameObject:
   m_ObjectHideFlags: 0
@@ -17526,7 +17540,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 1
 --- !u!1 &1444757263
 GameObject:
   m_ObjectHideFlags: 0
@@ -21363,7 +21379,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 1
 --- !u!1 &1815924168
 GameObject:
   m_ObjectHideFlags: 0
@@ -21479,7 +21497,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 0
 --- !u!4 &1817320923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3189549024151206517, guid: e02fc7ec606308e47a9b911ffe99f8ed, type: 3}
@@ -21874,7 +21894,9 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
-  timeToRevive: 5
+  timeToRevive: 99
+  isDead: 1
+  isEnemy: 1
 --- !u!224 &1874817710 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4612824604616156034, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}

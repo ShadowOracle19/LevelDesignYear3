@@ -57,11 +57,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public virtual void Start()
     {
         // Status initial settings
-        health = maxHealth;
-        shield = maxShield;
+        health = 0;
+        shield = 0;
 
         // Spawn
-        events.OnSpawn.Invoke();
+        //events.OnSpawn.Invoke();
 
         // Initial settings 
         player = GameObject.FindGameObjectWithTag("Player").transform;

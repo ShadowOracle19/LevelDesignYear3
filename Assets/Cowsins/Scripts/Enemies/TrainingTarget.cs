@@ -4,7 +4,8 @@ public class TrainingTarget : EnemyHealth
 {
     [SerializeField]private float timeToRevive;
 
-    private bool isDead = false;
+    public bool isDead = true;
+    public bool isEnemy = false;
 
     public override void Damage(float damage)
     {
@@ -12,6 +13,7 @@ public class TrainingTarget : EnemyHealth
         base.Damage(damage);
         GetComponent<Animator>().Play("Target_Hit");
     }
+
     public override void Die()
     {
         if (isDead) return;
@@ -27,7 +29,16 @@ public class TrainingTarget : EnemyHealth
         if (transform.parent.GetComponent<CompassElement>() != null) transform.parent.GetComponent<CompassElement>().Remove(); 
 
         GetComponent<Animator>().Play("Target_Die"); 
+        if(isEnemy)
+        {
+            GameManager.Instance.enemyTargetsShot += 1; 
+        }
+        else
+        {
+            GameManager.Instance.civiTargetsShot += 1;
+        }
     }
+
     public void Revive()
     {
         isDead = false;

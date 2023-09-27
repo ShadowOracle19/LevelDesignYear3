@@ -18,7 +18,11 @@ public class TrainingCourseTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        TimeManager.Instance.StartTimer();
-        gameObject.SetActive(false);
+        if(other.gameObject.tag == "Player")
+        {
+            TimeManager.Instance.StartTimer();
+            GameManager.Instance.ResetTrainingCourse();
+            gameObject.SetActive(false);
+        }
     }
 }
