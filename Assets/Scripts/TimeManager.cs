@@ -65,6 +65,7 @@ public class TimeManager : MonoBehaviour
         GameManager.Instance.finalTimePopup.SetActive(true);
         GameManager.Instance.timeToDisplay = timetext;
         GameManager.Instance.finalTimeText.text = timetext;
+        GameManager.Instance.leaderboardText.text = timetext;
 
         time = 0;
     }

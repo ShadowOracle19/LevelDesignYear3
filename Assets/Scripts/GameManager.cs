@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject finalTimePopup;
     public TextMeshProUGUI finalTimeText;
+    public TextMeshPro leaderboardText;
 
     public Transform enemyParent;
     public Transform civiParent;
