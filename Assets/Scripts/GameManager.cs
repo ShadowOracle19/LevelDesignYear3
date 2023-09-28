@@ -13,11 +13,16 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI enemyTargetsText;
     public TextMeshProUGUI civiTargetsText;
 
+    public GameObject finalTimePopup;
+    public TextMeshProUGUI finalTimeText;
+
     public Transform enemyParent;
     public Transform civiParent;
 
     public int enemyTargetsShot = 0;
     public int civiTargetsShot = 0;
+
+    public string timeToDisplay;
 
     private static GameManager _instance;
 
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour
         {
             civiTargets.Add(target.gameObject);
         }
+        finalTimePopup.SetActive(false);
 
         enemyTargetsText.text = $"0/{enemyTargets.Count}";
         civiTargetsText.text = $"0/{civiTargets.Count}";
@@ -70,6 +76,10 @@ public class GameManager : MonoBehaviour
         {
             target.GetComponentInChildren<TrainingTarget>().Revive();
         }
+        finalTimePopup.SetActive(false);
+
+        enemyTargetsText.text = $"0/{enemyTargets.Count}";
+        civiTargetsText.text = $"0/{civiTargets.Count}";
 
         enemyTargetsShot = 0;
         civiTargetsShot = 0;

@@ -50,7 +50,22 @@ public class TimeManager : MonoBehaviour
     public void LogTime()
     {
         runTimer = false;
+
+        time = time + (GameManager.Instance.civiTargetsShot * 2) + (GameManager.Instance.enemyTargets.Count - GameManager.Instance.enemyTargetsShot);
+
         GameManager.Instance.currentTime = time;
+
+        //format time
+        time += 1;
+        float minutes = Mathf.FloorToInt(time / 60);
+        float seconds = Mathf.FloorToInt(time % 60);
+        float milliSeconds = (time % 1) * 1000;
+        string timetext = string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliSeconds);
+        Debug.Log("Time taken: " + timetext);
+        GameManager.Instance.finalTimePopup.SetActive(true);
+        GameManager.Instance.timeToDisplay = timetext;
+        GameManager.Instance.finalTimeText.text = timetext;
+
         time = 0;
     }
 
