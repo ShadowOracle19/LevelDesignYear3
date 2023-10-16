@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Training Range.unity
-    guid: 644837562b17d0342a3d349d8491d437
+    path: Assets/Scenes/Simulated Mission Dragon.unity
+    guid: 002a040ad98638a4a8d00d648fe94ad2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 33f591010f343104f853b337a1fca25a, type: 2}
